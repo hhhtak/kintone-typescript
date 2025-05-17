@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2015", // Kintoneの環境に合わせて調整してください
+    "module": "none", // Kintoneカスタマイズファイルの場合、'none' が一般的です
+    // (Webpackなどのバンドラを使う場合は 'ESNext' や 'CommonJS' など)
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+    // "noEmit": true, // 型チェックのみ行い、JavaScriptファイルを出力しない場合
+    // "outFile": "./dist/customization.js" // 出力ファイルをまとめる場合 (moduleが 'none' の時など)
+  },
+  "include": [
+    "src/**/*.ts", // TypeScriptソースファイル (.ts) の場所
+    "src/*.ts", // TypeScriptソースファイル (.ts) の場所
+    "fields.d.ts" // 型定義ファイル (.d.ts) の場所 (tsconfig.jsonからの相対パス)
+  ]
+}
